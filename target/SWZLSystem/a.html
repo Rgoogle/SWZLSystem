@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>文件一键上传</title>
+    <script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function() {
+            //当点击"一键上传"按钮的时候,触发表单中的浏览文件的操作
+            $("#hehe").click(function() {
+                $("#uploadfile").click();
+            })
+            //当选择好上传文件后,执行提交表单的操作
+            $("#uploadfile").change(function() {
+                alert("上传文件");
+                $("#form1").submit();
+            })
+        })
+    </script>
+</head>
+
+<body>
+<input type="button" id="hehe" value="上传文件" />
+<form style="display: none;" id="form1" action="#" method="post" enctype="multipart/form-data" target="myframe">
+    <input type="file" name="uploadfile" id="uploadfile" />
+</form>
+<iframe style="display: none;" id="myframe"/>
+</body>
+
+</html>

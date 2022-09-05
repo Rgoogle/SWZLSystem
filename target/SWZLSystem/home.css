@@ -1,0 +1,20 @@
+/*图片介绍样式*/
+.JieSaoIMG{
+    height:10em;
+    width:20em;
+}
+/*搜索框所在的div*/
+.ss{
+    position: relative;
+    height: 44px;
+
+}
+/*搜索框样式*/
+.sousuo{
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 30px;
+    width: 50%;
+    background-color: #FFFFFF;
+}

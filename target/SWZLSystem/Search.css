@@ -1,0 +1,69 @@
+/*标签选择器*/
+body{
+    margin:0;/*外边距*/
+    padding:0;/*内边距*/
+    /* 上来就给个这两设置 让你的内容和页面无缝连接 */
+    background: #1661ab;
+    /* 这个不用说了吧 */
+}
+/*类选择器 class div容器*/
+.search-box{
+    /*定位属性 absolute 绝对定位*/
+    position: absolute;/* 不确定容器的大小时使用  ,margin-lift  right都是知道容器大小时使用的  */
+    top: 50%;
+    left: 50%;
+    /*3D 转换 旋转 缩放什么的 x ,y 平移 %相对于父元素宽度 或字体大小 */
+    transform: translate(-50%,-50%);/* 以上三个设定容器在页面上居中对齐 */
+    background: #ffffff;/*背景白色*/
+    height:40px;/*高40 像素*/
+    /* 给容器一个高度 */
+
+    /*圆角有左上角 右上角 左下角 右上角*/
+    border-radius: 40px; /* 允许元素添加圆角边框  这里表示添加半径为40像素的圆角*/
+    /*内边距*/
+    padding:15px;
+    /* 相当于是内衬 有15像素 */
+}
+/*类选择器 :伪类选选择器 hover 鼠标经过的样式  （div容器） >子选择器 直接后代 不能间距*/
+/* div 容器的 直接后代 > a 标签 背景为红色和*/
+.search-box:hover > .search-btn{
+    background: #851010;
+}
+/* div 容器的伪类 的直接后代 输入框 标签input 宽为230 内边距为 为两个参数 上下 和 左右*/
+.search-box:hover > .search-txt{/* 给悬停元素加样式 设置悬停展开后的样式 */
+    width:230px;
+    padding: 0 10px;
+}
+/*a 标签  颜色为紫色*/
+.search-btn{
+    color: #881821;/*a 标签紫色*/
+    float:right;/* 设置元素浮动 浮动向右 碰到父元素边界 或其他浮动元素为止*/
+    width:40px;/*宽*/
+    height: 40px;/* 高*/
+    border-radius: 50%;/*圆角边框 半径父级元素 50% 父级是div */
+    background:  #2f3640;/*背景黑色*/
+    display:flex;/*不管其内容如何，使所有弹性项目的长度均相同*/
+    justify-content: center;/*在容器中央对齐弹性项目 div 容器*/
+    align-items:center;   // 管左右居中/*将弹性 div ,,,,a 元素的所有项目的居中对齐*/
+    /*  这三个就是让这个放大镜图标居中*/
+    transition: 0.4s;/*0.4s延迟*/
+    /* 设置在某一段时间（0.4s）里改变css样式 */
+    text-decoration:none;/*设置 元素的文本修饰 none 默认 标准的文本*/
+    /* 让文本或内容无样式  这里是去掉了放大镜这个图标的下划线 应为设置连接后自动带下划线 */
+}
+/*输入框*/
+.search-txt{
+    border:none;
+    background: none;
+    outline: none; /* 点击搜索时无轮廓出现 */
+    /* 以上三条 去掉搜索框的 边框 背景 以及轮廓线 */
+    float:left; /* 这里也设浮动不过是向左 这样就可以和搜索图标在同一水平线了 */
+    padding:0;
+    color: #1c0d0d;/*字体颜色 输入的*/
+    font-size: 20px;/* 字体大小 */
+    transition: 0.04s;/*过度 0.04s*/
+    line-height :40px; /* 之前容器高度给了40像素 这里行高也给40像素 文字就可以居中显示了 */
+    width:0px; /* 把这个文本框宽度设置为0像素 在鼠标未悬停时就不显示了 从而达到变化效果 */
+
+}
+

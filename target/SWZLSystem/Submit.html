@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="SubmitFrom.css">
+    <link rel="stylesheet" href="FileUp.css">
+</head>
+<body>
+
+<div id="displayfron" style="">
+    <div class="form"><!--enctype="multipart/form-data"-->
+        <form id="from" action="submitinformation" enctype="multipart/form-data" method="post" >
+            <h1>失物信息提交</h1>
+            <div class="txtb">
+                <label for="">物品名称:</label>
+                <input type="text" name="name" placeholder="请输入丢失物品名称"></div>
+            <div class="txtb">
+                <label for="">丢失物品时间:</label>
+                <input type="datetime-local" name="time" placeholder="请输入物品丢失时间"></div>
+            <div class="txtb">
+                <label for="">物品丢失地点:</label>
+                <input type="text" name="position" placeholder="请输入物品丢失地点">
+            </div>
+
+            <div class="txtb">
+                <label for="">联系号码:</label>
+                <input type="text" name="phone" placeholder="请输入物品丢失地点">
+            </div>
+
+
+            <div class="txtb" >
+                <label for="">物品丢失的图片:</label>
+                <input type="file" id="file" name="file">ADD
+            </div>
+
+            <div class="txtb">
+                <label for="">备注(留言):</label>
+                <textarea name="other" id="" ></textarea>
+            </div>
+           <!-- < span class="btn">提交< /span >-->
+            <span><input id="submit" type="submit" value="提交"></span>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
